@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+과제 1 : Velog 가입 페이지 클론
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview 하기
 
-## Available Scripts
+과제: React를 사용해 Velog 자기소개 페이지 피그마 보고 클론코딩 해보기
 
-In the project directory, you can run:
+React의 styled components를 이용하여 코딩을 하였다.
 
-### `npm start`
+styled components란?
+- CSS를 컴포넌트화 시켜주는 라이브러리
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- html + js + css까지 묶어서 하나의 js파일 안에서 컴포넌트 단위로 개발할 수가 있음!!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 재사용성을 높일 수 있다는 장점이 있다!
 
-### `npm test`
+Building 하는법
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Repository 클론 및 폴더 이동(./pard_4th_jeeseokyoung_velog/)
+git clone https://github.com/4th-PARD-WEB-PART/JeeSeokyoung.git
+cd ./pard_4th_jeeseokyoung_velog
+package 다운받기
+npm install
+프로젝트 실행
+npm start
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+스크린샷
+https://github.com/4th-PARD-WEB-PART/JeeSeokyoung/blob/main/seminar_1/src/img/screenshot.png?raw=true
