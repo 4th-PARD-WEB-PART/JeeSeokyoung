@@ -27,7 +27,7 @@ npm install
 npm start
 
 스크린샷
-https://github.com/4th-PARD-WEB-PART/JeeSeokyoung/blob/main/seminar_1/src/img/screenshot.png?raw=true
+https://github.com/4th-PARD-WEB-PART/JeeSeokyoung/blob/main/seminar_1/public/img/screenshot.png?raw=true
 
 과제 2 : Velog 피드 페이지 클론
 
@@ -60,4 +60,4 @@ npm install
 npm start
 
 스크린샷
-
+https://github.com/4th-PARD-WEB-PART/JeeSeokyoung/blob/main/seminar_1/public/img/screenshot2.png?raw=true
