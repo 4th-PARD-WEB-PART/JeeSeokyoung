@@ -40,7 +40,7 @@ function FeedPage() {
             <Row>
                 <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
                 <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
-                <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" />
+                <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
             </Row>
         </Content>
       </Container>
