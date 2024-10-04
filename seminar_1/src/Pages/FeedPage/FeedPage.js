@@ -33,14 +33,18 @@ function FeedPage() {
         <Line/>
         <Content>
             <Row>
-                <FeedItem title="개강은 왜 하는걸까" date="2024년 8월 14일" subtitle="왜 개강임? 개처럼강해지기는그냥힘들어" comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
-                <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
-                <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
+                {/* <Link to="/detail"> */}
+                    <FeedItem title="개강은 왜 하는걸까" date="2024년 8월 14일" subtitle="왜 개강임? 개처럼강해지기는그냥힘들어" comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
+                    <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
+                    <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
+                {/* </Link> */}
             </Row>
             <Row>
-                <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
-                <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
-                <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
+                {/* <Link to="/detail"> */}
+                    <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
+                    <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
+                    <FeedItem title="게으르다고 쫗겨났다" date="2024년 8월 14일" subtitle="회사에서 게으르다고 쫓겨났다." comment="23개의 댓글" image = "./img/Feed.png" image2 = "./img/FeedWriter.png" by="by" writer="살몬"/>
+                {/* </Link> */}
             </Row>
         </Content>
       </Container>
@@ -90,7 +94,7 @@ export const Logo = styled.img`
 
 export const Notification = styled.img`
     padding-top: 10px;
-    margin-left : 711px;
+    margin-left : 559px;
     width: 15.5px;
     height: 20px;
     gap: 0px;

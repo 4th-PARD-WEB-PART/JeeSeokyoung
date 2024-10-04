@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const FeedContainer = styled.div`
     width: 327px;
@@ -141,6 +142,7 @@ export const FeedItem = ({ title, subtitle, date, comment, by, writer, image, im
 
     return (
         <FeedContainer>
+            <Link to="/detail">
             <FeedImage src={image} />
             <FeedContent>
                 <FeedTitle>{title}</FeedTitle>
@@ -164,6 +166,7 @@ export const FeedItem = ({ title, subtitle, date, comment, by, writer, image, im
                     <FeedLikeAmount>{likesCount}</FeedLikeAmount>
                 </DataWriterLike>
             </FeedContent>
+            </Link>
         </FeedContainer>
     );
 };

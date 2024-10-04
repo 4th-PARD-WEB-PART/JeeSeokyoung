@@ -1,16 +1,33 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
+import { useNavigate } from "react-router-dom";
 
 function RegisterPage() {
+  const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [introduction, setIntroduction] = useState("");
+  const [checkBox, setCheckBox] = useState(false);
 
-  const [name, setName] = useState();
-  const [email, setEmail]= useState();
+  const validateForm = () => {
+    if (!name || !email || !password || !introduction || !checkBox) {
+      alert("모든 칸을 입력하세요.");
+      return false;
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      alert("이메일 주소를 올바르게 입력해주세요.");
+      return false;
+    }
+    return true;
+  };
 
-  // useEffect(() => {
-  //   console.log(name);
-  //   console.log(email);
-  // }, [name, email]);
-  
+  const handleRegister = () => {
+    if (validateForm()) {
+      navigate("/feed");
+    }
+  };
+
   return (
     <BaseContainer>
     <Container>
@@ -27,23 +44,23 @@ function RegisterPage() {
       </InputContainer2>
       <InputContainer3>
         <Label>비밀번호</Label>
-        <Input id="input-password" name="input-pw" type="text" width="274px" placeholder="비밀번호를 입력해주세요." />
+        <Input onChange={(e) => setPassword(e.target.value)} value={password} id="input-password" name="input-pw" type="text" width="274px" placeholder="비밀번호를 입력해주세요." />
       </InputContainer3>
       <InputContainer4>
         <Label>한 줄 소개</Label>
-        <Input id="input-introduce" name="input-introduce" type="text" width="373px" placeholder="당신을 한 줄로 소개해보세요" />
+        <Input onChange={(e) => setIntroduction(e.target.value)} value={introduction} id="input-introduce" name="input-introduce" type="text" width="373px" placeholder="당신을 한 줄로 소개해보세요" />
       </InputContainer4>
       
       <CheckboxContainer>
-        <Checkbox type="checkbox" />
+        <Checkbox type="checkbox" checked={checkBox} onChange={() => setCheckBox(!checkBox)}/>
         <Label1>
-          <Link href="#">이용약관</Link>과 <Link href="#">개인정보취급방침</Link>에 동의합니다.
+          <Link href="#" target='_blank'>이용약관</Link>과 <Link href="#" target='_blank'>개인정보취급방침</Link>에 동의합니다.
         </Label1>
       </CheckboxContainer>
       
       <ButtonContainer>
-        <ButtonCancel>취소</ButtonCancel>
-        <ButtonSubmit>가입</ButtonSubmit>      
+        <ButtonCancel onClick={() => alert("취소하였습니다.")}>취소</ButtonCancel>
+        <ButtonSubmit onClick={handleRegister}>가입</ButtonSubmit>      
       </ButtonContainer>
     </Container>
     </BaseContainer>

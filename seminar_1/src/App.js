@@ -1,15 +1,20 @@
 import './App.css';
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import FeedPage from "./Pages/FeedPage/FeedPage";
+import { BrowserRouter } from 'react-router-dom';
+import MyRouter from './MyRouter';
 
 
 
 function App() {
   return(
-    <div>
-        {/* <RegisterPage/> */}
-        <FeedPage/>
-    </div>
+    <BrowserRouter>
+      <MyRouter />
+    </BrowserRouter>
+    // <div>
+    //     {/* <RegisterPage/> */}
+    //     <FeedPage/>
+    // </div>
    
   );
 }
