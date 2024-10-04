@@ -61,3 +61,46 @@ npm start
 
 스크린샷
 https://github.com/4th-PARD-WEB-PART/JeeSeokyoung/blob/main/seminar_1/public/img/screenshot2.png?raw=true
+
+
+<h1>[과제3] Velog 회원가입, 피드페이지, 디테일페이지 연결하고 만들기</h1>
+<h2>📖 소개</h2>
+<p>이번 과제는 Velog에 여러 페이지들을 구현하는 것입니다.</p>
+
+<p>목표: 
+
+1. 각 페이지 연결하기
+2. 디테일 페이지 구현하기
+3. 변수로 데이터 가져오기
+</p>
+
+<h2>기능</h2>
+<ul>
+    <li><strong>Routes, Route</strong>: 페이지간 이동을 하기 위해 사용된다.</li>
+    <li><strong>Link</strong>: 피드페이지에서 디테일페이지로, 디테일페이지에서 피드페이지로 가는데 사용된다.</li>
+    <li><strong>Nav</strong>: 가입페이지에서 피드페이지로 이동하는데 사용된다.</li>
+</ul>
+
+
+<h2>어려웠던 점</h2>
+<p> link에 대해서는 조금 알겠으나 navigate 쓰는것이 어려워 공부가 필요할 것 같다.
+<p> 레이아웃을 처음에 세세하게 안짰다고 시간을 너무 많이 소비하여 어려움이 있었고 최대한 세분화하는 것이 좋다는 것을 깨달았다.
+
+<h2>스크린샷</h2>
+https://github.com/4th-PARD-WEB-PART/JeeSeokyoung/blob/main/seminar_1/public/img/screenshot3.png?raw=true
+
+## 프로젝트 빌드 방법
+
+### 1. 레포지토리 클론 및 폴더 이동
+먼저 프로젝트 레포지토리를 클론하고 해당 폴더로 이동합니다.
+
+```bash
+git clone https://github.com/4th-PARD-WEB-PART/JeeSeokyoung.git
+cd ./seminar_1
+
+
+패키지 다운받기
+npm install
+
+프로젝트 실행
+npm start
