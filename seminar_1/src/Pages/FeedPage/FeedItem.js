@@ -2,6 +2,9 @@ import styled from "styled-components";
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 
+const StyledLink = styled(Link)`
+    text-decoration: none;  // 밑줄 제거
+`
 const FeedContainer = styled.div`
     width: 327px;
     height: 386px;
@@ -142,7 +145,7 @@ export const FeedItem = ({ title, subtitle, date, comment, by, writer, image, im
 
     return (
         <FeedContainer>
-            <Link to="/detail">
+            <StyledLink to="/detail">
             <FeedImage src={image} />
             <FeedContent>
                 <FeedTitle>{title}</FeedTitle>
@@ -166,7 +169,7 @@ export const FeedItem = ({ title, subtitle, date, comment, by, writer, image, im
                     <FeedLikeAmount>{likesCount}</FeedLikeAmount>
                 </DataWriterLike>
             </FeedContent>
-            </Link>
+            </StyledLink>
         </FeedContainer>
     );
 };

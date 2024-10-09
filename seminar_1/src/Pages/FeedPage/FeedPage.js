@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FeedItem } from './FeedItem';
+import { Link } from 'react-router-dom';
 
 function FeedPage() {
 
@@ -11,7 +12,9 @@ function FeedPage() {
           <Notification src="./img/Notification.png" alt="Notification" />
           <Search src="./img/Search.png" alt="Search" />
           <Writing src="./img/Writing.png" alt="Writing" />
-          <Profile src="./img/Profile.png" alt="Profile" />
+          <Link to="/edit">
+            <Profile src="./img/Profile.png" alt="Profile" />
+          </Link>
         </Top>
         <Menu>
           <Box1>
@@ -94,7 +97,7 @@ export const Logo = styled.img`
 
 export const Notification = styled.img`
     padding-top: 10px;
-    margin-left : 559px;
+    margin-left : 705px;
     width: 15.5px;
     height: 20px;
     gap: 0px;

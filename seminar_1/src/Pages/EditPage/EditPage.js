@@ -1,40 +1,46 @@
-import { nameState, emailState, passwordState, introductionState } from '../../../src/Atom';
-import { useState } from 'react';
-import styled from 'styled-components';
-import { useRecoilState } from 'recoil';
 import { useNavigate } from "react-router-dom";
+import { useRecoilState } from 'recoil';
+import { nameState, emailState, passwordState, introductionState } from '../../../src/Atom';
+import styled from 'styled-components';
 
-function RegisterPage() {
-  const navigate = useNavigate();
+function EditPage() {
+    const navigate = useNavigate();
   const [name, setName] = useRecoilState(nameState);
   const [email, setEmail] = useRecoilState(emailState);
   const [password, setPassword] = useRecoilState(passwordState);
   const [introduction, setIntroduction] = useRecoilState(introductionState);
-  const [checkBox, setCheckBox] = useState(false);
 
-  const validateForm = () => {
-    if (!name || !email || !password || !introduction || !checkBox) {
-      alert("모든 칸을 입력하세요.");
-      return false;
-    }
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      alert("이메일 주소를 올바르게 입력해주세요.");
-      return false;
-    }
-    return true;
-  };
+    const validateForm = () => {
+        if (!name || !email || !password || !introduction) {
+            alert("모든 칸을 입력하세요.");
+            return false;
+        }
+        if (!/\S+@\S+\.\S+/.test(email)) {
+            alert("이메일 주소를 올바르게 입력해주세요.");
+            return false;
+        }
+        return true;
+    };
 
-  const handleRegister = () => {
-    if (validateForm()) {
-      navigate("/feed");
-    }
-  };
+    const handleRegister = () => {
+        if (validateForm()) {
+            navigate("/feed");
+        }
+    };
 
-  return (
+    return (
     <BaseContainer>
-    <Container>
-      <Title>환영합니다!</Title>
-      <Subtitle>기본 회원 정보를 등록해주세요</Subtitle>
+      <Container>
+        <Top>
+          <Logo src="./img/Velog.png" alt="Velog" />
+          <Notification src="./img/Notification.png" alt="Notification" />
+          <Search src="./img/Search.png" alt="Search" />
+          <Writing src="./img/Writing.png" alt="Writing" />
+          <Profile src="./img/Profile.png" alt="Profile" />
+        </Top>
+        <Middle>
+        <Title>회원정보 수정</Title>
+      <Subtitle>기본 회원 정보를 수정해주세요</Subtitle>
       
       <InputContainer1>
         <Label>이름</Label>
@@ -53,51 +59,106 @@ function RegisterPage() {
         <Input onChange={(e) => setIntroduction(e.target.value)} value={introduction} id="input-introduce" name="input-introduce" type="text" width="373px" placeholder="당신을 한 줄로 소개해보세요" />
       </InputContainer4>
       
-      <CheckboxContainer>
-        <Checkbox type="checkbox" checked={checkBox} onChange={() => setCheckBox(!checkBox)}/>
-        <Label1>
-          <Link href="#" target='_blank'>이용약관</Link>과 <Link href="#" target='_blank'>개인정보취급방침</Link>에 동의합니다.
-        </Label1>
-      </CheckboxContainer>
-      
       <ButtonContainer>
         <ButtonCancel onClick={() => alert("취소하였습니다.")}>취소</ButtonCancel>
-        <ButtonSubmit onClick={handleRegister}>가입</ButtonSubmit>      
+        <ButtonSubmit onClick={handleRegister}>수정</ButtonSubmit>      
       </ButtonContainer>
-    </Container>
+        </Middle>
+      </Container>
     </BaseContainer>
-  );
-}
+    )
+  }
 
-export default RegisterPage;
+  export default EditPage;
 
-// 전체 컨테이너
+
+
 export const BaseContainer = styled.div`
-  width: 1800px;
-  height: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 20px;
-  max-width: 400px;
-  margin: 0 auto;
+    width: 1800px;
+    height: 1000px;
+    background: #FFFFFF;
 `;
 
 export const Container = styled.div`
-  padding: 0px;
-  margin-left: 730px;
-  margin: 168px;
-  width: 1000px;
+    margin-left : 381px;
+    margin-right : 379px;
+    width: 1040px;
+    height: 792px; 
+    background: #FFFFFF;
 `;
 
 
-// 제목
+export const Top = styled.div`
+    padding-top: 15px;
+    padding-right: 23px;
+    width: 1040px;
+    height: 40px; 
+    background: #FFFFFF;
+    display : flex;
+    align-items : center;
+`;
+
+export const Middle = styled.div`
+    margin-top: 116px;
+    margin-left: 349px;
+`
+
+export const Logo = styled.img`
+    padding-top: 9px;
+    width: 72px;
+    height: 23px;
+    top: 24px;
+    left: 381px;
+    gap: 0px;
+    opacity: 0px;
+`;
+
+export const Notification = styled.img`
+    padding-top: 10px;
+    margin-left : 705px;
+    width: 15.5px;
+    height: 20px;
+    gap: 0px;
+    border: 2px;
+    opacity: 0px;
+    color: #343A40;
+`;
+
+export const Search = styled.img`
+    padding-top: 11px;
+    margin-left: 27.5px;
+    width: 17px;
+    height: 17.5px;
+    gap: 0px;
+    border: 2px;
+    opacity: 0px;
+    color : #343A40;
+`;
+
+export const Writing = styled.img`
+    padding-top: 4px;
+    margin-left : 19px;
+    width: 100px;
+    height: 33px;
+    gap: 0px;
+    border-radius: 16.5px;
+    border: 1px;
+    opacity: 0px;
+`;
+
+export const Profile = styled.img`
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    gap: 0px;
+    opacity: 0px;
+`;
+
 export const Title = styled.h1`
   color: #212529;
-  margin-top: 168px;
+  margin-top: 116px;
   margin-bottom: 0px;
-  width: 252px; 
+  width: 294px; 
   text-align: left;
   font-family: Inter;
   font-size: 51px;
@@ -126,7 +187,7 @@ export const Label = styled.label`
   font-size: 15px;
   font-weight: 700;
   text-align: left;
-  color : #ACB5BD;
+  color: #ACB5BD;
 `;
 
 export const Input = styled.input`
@@ -169,7 +230,7 @@ export const InputContainer1 = styled.div`
       color: #15B886; /* 호버 시 플레이스홀더 색상 변경 */
     }
   }
-
+  
   ${Input}:focus {
     border-bottom: 1px solid #15B886; /* 인풋 활성화 시 테두리 색상 변경 */
     color: #15B886; /* 입력 중 텍스트 색상 */
@@ -225,6 +286,7 @@ export const InputContainer3 = styled.div`
   }
 
   &:hover ${Input} {
+    color: #15B886;
     border-bottom: 1px solid #15B886; /* 호버 시 인풋 아래 테두리 색상 변경 */
   }
 
@@ -260,7 +322,7 @@ export const InputContainer4 = styled.div`
   }
 
   &:hover ${Input}::placeholder {
-    color: #15B886; /* 호버 시 플레이스홀더 색상 변경 */
+    color: #15B886;; /* 호버 시 플레이스홀더 색상 변경 */
   }
 
   ${Input}:focus {
@@ -273,53 +335,11 @@ export const InputContainer4 = styled.div`
   }
 `;
 
-// 체크박스 컨테이너
-export const CheckboxContainer = styled.div`
-  font-family: Inter;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 15.73px;
-  text-align: left;
-  color: #000;
-`;
-
-// 체크박스
-export const Checkbox = styled.input`
-  width: 15px;
-  height: 15px;
-  top: 691px;
-  left: 730px;
-  gap: 0px;
-  border-radius: 3px 0px 0px 0px;
-  border: 1px 0px 0px 0px;
-  opacity: 0px;
-  margin-right: 11px;
-`;
-
-// 링크 스타일
-export const Link = styled.a`
-  color: #15B886; /* 링크 색상 */
-  font-family: Inter;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 15.73px;
-  text-align: left;
-`;
-
-export const Label1 = styled.a`
-  color: #000000; /* 링크 색상 */
-  font-family: Inter;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 15.73px;
-  text-align: left;
-`;
-
 export const ButtonContainer = styled.div`
   display: flex; /* Flexbox 사용 */
   justify-content: between; /* 양쪽 끝으로 버튼 배치 */
   width: 100%; /* 버튼이 컨테이너의 전체 너비를 사용하도록 설정 */
-  margin-top: 84px; /* 상단 간격 */
+  margin-top: 54px; /* 상단 간격 */
   align-items: left;
   border-radius: 20.5px;
   opacity: 0px;
@@ -327,7 +347,6 @@ export const ButtonContainer = styled.div`
 `;
 
 export const ButtonCancel = styled.button`
-  margin-top: 84px;
   font-family: Inter;
   font-size: 20px;
   font-weight: 700;
@@ -344,7 +363,6 @@ export const ButtonCancel = styled.button`
 `;
 
 export const ButtonSubmit = styled.button`
-  margin-top: 84px;
   font-family: Inter;
   font-size: 20px;
   font-weight: 700;
