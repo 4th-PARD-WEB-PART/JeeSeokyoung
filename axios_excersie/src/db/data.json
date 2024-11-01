@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "김광일",
+      "age": "24",
+      "part": "web",
+      "image": "https://i.ytimg.com/vi/-nUBZz2PM3c/maxresdefault.jpg"
+    },
+    {
+      "id": "2",
+      "name": "권채은",
+      "age": "23",
+      "part": "web",
+      "image": "https://item.kakaocdn.net/do/4bb402ea7fd0c92f558d7f4897c28d77fba8e3d30017c7399e19e508ee32200a"
+    },
+    {
+      "id": "3",
+      "name": "지석영",
+      "age": "23",
+      "part": "web",
+      "image": "https://item.kakaocdn.net/do/4bb402ea7fd0c92f558d7f4897c28d777e6f47a71c79378b48860ead6a12bf11"
+    },
+    {
+      "id": "4",
+      "name": "천주현",
+      "age": "23",
+      "part": "server",
+      "image": "https://item.kakaocdn.net/do/4bb402ea7fd0c92f558d7f4897c28d778b566dca82634c93f811198148a26065"
+    },
+    {
+      "id": "6",
+      "name": "강신엽",
+      "age": "23",
+      "part": "web",
+      "image": "https://cdn.pixabay.com/photo/2021/10/25/00/00/mike-wazowski-6739521_640.png"
+    },
+    {
+      "id": "5",
+      "name": "김세현",
+      "age": "22",
+      "part": "web",
+      "image": "https://i.pinimg.com/474x/99/65/6a/99656aa99806f308308c3f629cfd34f6.jpg"
+    }
+  ]
+}
